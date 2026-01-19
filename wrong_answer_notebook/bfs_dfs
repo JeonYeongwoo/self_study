@@ -1,0 +1,18 @@
+1260_순서라도 외우기
+
+dfs -> 마지막에 들어온게 먼저 나와야 함. -> last in first out, 따라서 stack 사용해야 함.
+bfs -> 처음 들어온 게 먼저 나와야 함 -> first in first out, 따라서 queue를 사용해야 함.
+
+전체적인 알고리즘은 다음과 같음.
+1. queue / stack 사용
+2. queue / stack 에 첫 시작 노드 삽입
+3. 첫 시작 노드 visited 세팅
+  4. while 루프 (조건 => queue / stack not empty 인 경우) ## stack empty는 len(stack) != 0 이라고 적기
+  5. v 임시 변수에 pop 한 결과 저
+  6. if visited == 0 인 경우에만
+    7. 노드 상 connected 리스트에 대해서 for 문으로 u 불러오고
+    8. u에 visited = 1
+    9. queue / stack 에 아이템 append
+
+
+요약 -> 1. 초기화 2. 첫노드 세팅 3. while 4. if visited 5. pop 6. print  7. for 8. if vsited 9. append (와낫엠 팝프 포이비 )
